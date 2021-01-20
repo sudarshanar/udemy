@@ -13,7 +13,7 @@ public class Java8ParallelStream {
 		//Parallel Stream
 		myList.parallelStream().filter(s -> s.getId() > 85).forEach(System.out::println);
 		//parallel method
-		myList.stream().parallel().filter(s -> s.getId() > 85).forEach(System.out::println);
+		myList.stream().parallel().filter(s -> s.getId() > 85).forEach(s->System.out.println(s));
 	}
 	
 
