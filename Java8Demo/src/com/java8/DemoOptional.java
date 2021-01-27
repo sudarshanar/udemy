@@ -14,10 +14,14 @@ public class DemoOptional {
 		if(book!=null)
 			System.out.println(book.toUpperCase());
 		
-		String newBook = null;
+		String newBook = "Test";
+//		optionalString = Optional.of(newBook); // will get NPE
 		optionalString = Optional.ofNullable(newBook);
 		if(optionalString.isPresent())
-			System.out.println(optionalString.orElse("empty String").toLowerCase());
+			System.out.println(optionalString.get().toLowerCase().toUpperCase());
+		
+		Optional<String> optionalString1 = Optional.ofNullable(null);
+		System.out.println(optionalString1.orElse("empty String").toLowerCase());
 	}
 
 }

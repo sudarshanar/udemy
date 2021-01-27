@@ -1,5 +1,6 @@
 package com.java8.again;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,9 +12,11 @@ public class Java8ParallelStream {
 		//normalStream
 		myList.stream().filter(s -> s.getId() > 85).forEach(System.out::println);
 		//Parallel Stream
-		myList.parallelStream().filter(s -> s.getId() > 85).forEach(System.out::println);
+		List<Student> newList = new ArrayList<>();
+		myList.parallelStream().filter(s -> s.getId() > 85).forEach(newList::add);
 		//parallel method
 		myList.stream().parallel().filter(s -> s.getId() > 85).forEach(s->System.out.println(s));
+		System.out.println("New List" +newList);
 	}
 	
 
