@@ -12,7 +12,7 @@ public class DemoCalculator {
 		System.out.println(demoMult.use2No(25, 10));
 	}
 }
-//Commiting from intellij
+//Commiting from intellij1
 interface DemoInterfaceFor2Arg {
 	public abstract int use2No(int a, int b);
 }
